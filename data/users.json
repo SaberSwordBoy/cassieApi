@@ -1,0 +1,17 @@
+{"users":
+  {
+    "Bryce": {
+      "Pronouns": ["She", "They", "Fae"]
+      },
+
+    "Cassie": {
+      "Pronouns": ["She", "They"]
+    },
+    "Rae": {
+      "Pronouns": ["She", "Her"]
+    },
+    "Aylwin": {
+      "Pronouns": ["He", "Xe"]
+    }
+  }
+}
