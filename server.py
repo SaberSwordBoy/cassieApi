@@ -36,10 +36,12 @@ class GetResponse(Resource):
         args = parser.parse_args()  # parse arguments to dictionary
         if args['input'] == "" or args['input'] == " ": return "ERROR: No Input", 400 # return No Input with 400 ERROR if there is no input
 
-        response = get_ai_response(args['input'])
+        response = get_ai_response(args['input']).lower()
 
         if response == "help": # check for special responses
             data_resp['data']['func'] = "assistant_help"
+        elif response == "note": 
+            data_resp['data']['func'] = "create_note"
 
         data_resp['data']['response'] = response
         print(f"[green][✅] Responding to query '{args['input']}' with {response}, data: {data_resp}[/green]") # Print out query/response

@@ -1,17 +1,7 @@
 {
   "intents": [
     {
-      "tag": "unknown",
-      "patterns": [],
-      "responses": [
-        "Couldn't understand that, sorry. ",
-        "Sorry, I didn't understand that. ",
-        "BRUH IDK WHAT THAT MEANS"
-      ],
-      "context_set": ""
-    },
-    {
-      "tag": "greeting",
+      "tag": "greetings",
       "patterns": [
         "Hi",
         "Is anyone there?",
@@ -83,7 +73,20 @@
         "How does this work"
       ],
       "responses": [
-        "help"
+        "help", "HELP"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "notes",
+      "patterns": [
+        "make a new note",
+        "create a new note",
+        "write something down for me"
+      ],
+      "responses": [
+        "note",
+        "NOTE"
       ],
       "context_set": ""
     }

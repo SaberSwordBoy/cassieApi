@@ -18,13 +18,15 @@ print("Type a message and hit enter. Your message gets sent to the Cassie server
 
 print("Enter text to say to Cassandra")
 
-# Functions to run
-
+# Functions
 def assistant_help():
     print("-"*50)
     print("\t\tHELP")
     print("-"*50)
 
+def create_note():
+    # do stuff
+    print("Create a new note")
 
 # Main Loop
 while True:
