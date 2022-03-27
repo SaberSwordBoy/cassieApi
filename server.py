@@ -59,4 +59,4 @@ api.add_resource(GetResponse, '/getresponse')
 
 # Run the program
 if __name__ == '__main__':
-    app.run(host="45.33.77.180", port=80) # host needs to be server IP or will not work. Port 80 works best. 
+    app.run(host="", port=80) # host needs to be server IP or will not work. Port 80 works best. 
