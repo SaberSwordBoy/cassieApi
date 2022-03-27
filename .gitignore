@@ -1,4 +1,5 @@
-venv
-database
-.idea
-__pycache__
+venv # dont need the venv
+database # idk why this is even here
+.idea # IDE stuff
+__pycache__ # Python cache
+nohup.out # Logs
