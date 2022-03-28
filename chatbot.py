@@ -5,9 +5,7 @@ import neuralintents
 mappings = {}
 assistant = neuralintents.GenericAssistant('data/intents.json', model_name="data/model", intent_methods=mappings)
 
-# Create and save a model
-assistant.train_model()
-#assistant.save_model()
+assistant.train_model() # train the model
+#assistant.save_model() # save the model
 
-# Load a previously created model
-#assistant.load_model()
+#assistant.load_model() # load the model

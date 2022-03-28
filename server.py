@@ -1,25 +1,28 @@
 import flask
 from flask_restful import Api, Resource, reqparse
-import json
-import random
 import chatbot
 from rich import print
+import configparser
 
-DEBUG = False
+config = configparser.ConfigParser()
+config.read('config/config.ini')
 
-print("Starting up...")
+DEBUG = config.getboolean('Server', "Debug")
+HOST = config.get('Server', 'ip')
+PORT = config.get('Server', 'port')
+
+print("="*50)
+print("\t\tStarting up...")
+print("="*50)
 
 app = flask.Flask(__name__)
 api = Api(app)
 
-FILTER_CHARS = ["!", ",", '"', '"', "?", ".", "@", "#", "$", "%", "^", "&", "*", "(", ")",]
+FILTER_CHARS = ["!", ",", '"', '"', "?", ".", "@", "#", "$", "%", "^", "&", "*", "(", ")","}", "{", "[", "]"]
 
 def remove_unwanted_chars(string):
     """Remove Filter Chars from the input string"""
-    for i in string: 
-        if i in FILTER_CHARS: 
-            string = string.replace(i, "")
-    return string
+    return "".join(i for i in string if not i in FILTER_CHARS)
 
 def get_ai_response(input_message):
     """Request a response to input from the chatbot"""
@@ -63,4 +66,4 @@ api.add_resource(GetResponse, '/getresponse')
 
 # Run the program
 if __name__ == '__main__':
-    app.run(host="45.33.77.180", port=80) # host needs to be server IP or will not work. Port 80 works best. 
+    app.run(host=HOST, port=PORT) # host needs to be server IP or will not work. Port 80 works best. 
