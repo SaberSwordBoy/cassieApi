@@ -3,6 +3,8 @@
 A simple API written in Python.  
 Designed for a chatbot / virtual assistant. 
 
+https://stats.uptimerobot.com/YxNP5UDOLV <= API should be up and running.
+
 
 ## Chatbot
 
