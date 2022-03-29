@@ -1,6 +1,19 @@
 {
   "intents": [
     {
+      "tag": "unknown",
+      "patterns": [
+        "I","You","asdsad", "laksjdlda", "me", "fuck", "shit",
+        "A","B","C","D","E","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","X"
+      ],
+      "responses": [
+        "Sorry, I don't understand",
+        "The fuck you mean",
+        "Idk what that means dumbass"
+      ],
+      "context_set": ""
+    },
+    {
       "tag": "greetings",
       "patterns": [
         "Hi",
@@ -87,6 +100,70 @@
       "responses": [
         "note",
         "NOTE"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "email",
+      "patterns": [
+        "send an email",
+        "create an email",
+        "send a message"
+      ],
+      "responses": [
+        "email",
+        "EMAIL"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "good",
+      "patterns": [
+        "im good",
+        "im doing well",
+        "not bad",
+        "good, how about you?",
+        "good, hbu"
+      ],
+      "responses": [
+        "Good!",
+        "That's great",
+        "Great! How can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "inthemiddle",
+      "patterns": [
+        "i'm all right",
+        "eh",
+        "kinda good kinda bad",
+        "the usual",
+        "terribly"
+      ],
+      "responses": [
+        "At least you're here!",
+        "That sucks. Can I help you?",
+        "I'm sorry you feel that way. How can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "bad",
+      "patterns": [
+        "im bad",
+        "doing horribly",
+        "horrible",
+        "not good",
+        "sucky",
+        "terribly",
+        "not going well",
+        "shitty"
+      ],
+      "responses": [
+        "Sorry to hear that.",
+        "That sucks. Can I help you?",
+        "I'm sorry you feel that way. How can I help?"
       ],
       "context_set": ""
     }

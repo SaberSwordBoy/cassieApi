@@ -33,18 +33,21 @@ class GetResponse(Resource):
     Page for getting responses to input
     """
     def post(self):
-        data_resp = {'data': {}}
+        data_resp = {'data':{}}
         parser = reqparse.RequestParser()  # initialize
-        parser.add_argument('input', required=True)  # add args
+        parser.add_argument('input', required=True)  # add input argument
         args = parser.parse_args()  # parse arguments to dictionary
         if args['input'] == "" or args['input'] == " ": return "ERROR: No Input", 400 # return No Input with 400 ERROR if there is no input
 
         response = get_ai_response(args['input']).lower()
 
-        if response == "help": # check for special responses
+        # Check for special functions/responses
+        if response == "help": 
             data_resp['data']['func'] = "assistant_help"
         elif response == "note": 
             data_resp['data']['func'] = "create_note"
+        elif response == 'email':
+            data_resp['data']['func'] = 'send_email'
 
         data_resp['data']['response'] = response
         print(f"[green][✅] Responding to query '{args['input']}' with {response}, data: {data_resp}[/green]") # Print out query/response
