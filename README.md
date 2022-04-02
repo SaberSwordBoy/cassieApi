@@ -3,7 +3,7 @@
 A simple API written in Python.  
 Designed for a chatbot / virtual assistant. 
 
-http://cassandra.cf <= Web client!
+http://cassandra.cf <= Web client!  
 https://stats.uptimerobot.com/YxNP5UDOLV <= API should be up and running.  
 https://github.com/SaberSwordBoy/cassieVoiceClient <= Client that uses TTS and Voice recognition (in progress currently)
 
